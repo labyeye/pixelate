@@ -44,272 +44,263 @@
       })(window, document);
     </script>
          
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
           
     <style>
+      .services-section {
+        padding: 60px 0;
+      }
+      .services-section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-/* Services Section Styles */
-.services-section {
-  padding: 60px 0;
-}
+      .services-section .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 32px;
+        color: #ec5b37;
+        position: relative;
+      }
 
-.services-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+      .services-section .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: #ec5b37;
+        margin: 15px auto 0;
+      }
 
-.services-section .section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 32px;
-  color: #ec5b37;
-  position: relative;
-}
+      .services-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
 
-.services-section .section-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #ec5b37;
-  margin: 15px auto 0;
-}
+      .service-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex: 1;
+        min-width: 200px;
+        max-width: 250px;
+        text-align: center;
+      }
 
-/* Cards Layout */
-.services-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
 
-.service-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1;
-  min-width: 200px;
-  max-width: 250px;
-  text-align: center;
-}
+      .card-icon {
+        font-size: 44px;
+        color: #ec5b37;
+        margin-bottom: 20px;
+      }
 
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+      .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
 
-/* Card Content */
-.card-icon {
-  font-size: 44px;
-  color: #ec5b37;
-  margin-bottom: 20px;
-}
+      .service-card p {
+        font-size: 14px;
+        color: #7f8c8d;
+      }
 
-.service-card h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #2c3e50;
-}
+      @media (max-width: 1200px) {
+        .service-card {
+          max-width: 220px;
+        }
+      }
 
-.service-card p {
-  font-size: 14px;
-  color: #7f8c8d;
-}
+      @media (max-width: 992px) {
+        .services-cards {
+          gap: 20px;
+        }
+        
+        .service-card {
+          max-width: 200px;
+        }
+      }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .service-card {
-    max-width: 220px;
-  }
-}
+      @media (max-width: 768px) {
+        .services-cards {
+          gap: 15px;
+        }
+        
+        .service-card {
+          flex: 0 0 calc(50% - 15px);
+          max-width: none;
+        }
+      }
 
-@media (max-width: 992px) {
-  .services-cards {
-    gap: 20px;
-  }
-  
-  .service-card {
-    max-width: 200px;
-  }
-}
+      @media (max-width: 576px) {
+        .service-card {
+          flex: 0 0 100%;
+          max-width: 320px;
+        }
+        
+        .section-title {
+          font-size: 28px;
+        }
+      }
+      .cta-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+      }
 
-@media (max-width: 768px) {
-  .services-cards {
-    gap: 15px;
-  }
-  
-  .service-card {
-    flex: 0 0 calc(50% - 15px);
-    max-width: none;
-  }
-}
+      .cta-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-@media (max-width: 576px) {
-  .service-card {
-    flex: 0 0 100%;
-    max-width: 320px;
-  }
-  
-  .section-title {
-    font-size: 28px;
-  }
-}
-/* Enhanced CTA Section */
-.cta-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
-  position: relative;
-  overflow: hidden;
-  color: #fff;
-}
+      .cta-content {
+        max-width: 800px;
+      }
 
-.cta-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+      .cta-title {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: -0.5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
 
-.cta-content {
-  max-width: 800px;
-}
+      .cta-subtitle {
+        font-size: 18px;
+        margin-bottom: 35px;
+        font-weight: 300;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
 
-.cta-title {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
 
-.cta-subtitle {
-  font-size: 18px;
-  margin-bottom: 35px;
-  font-weight: 300;
-  line-height: 1.6;
-  opacity: 0.9;
-}
+      .primary-button {
+        display: inline-block;
+        background-color: #ff7e5f;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 15px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
+      }
 
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+      .primary-button:hover {
+        background-color: #ff9d85;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 25px rgba(255, 126, 95, 0.4);
+      }
 
-.primary-button {
-  display: inline-block;
-  background-color: #ff7e5f;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 15px 32px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
-}
+      .secondary-button {
+        display: inline-block;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 13px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+      }
 
-.primary-button:hover {
-  background-color: #ff9d85;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 25px rgba(255, 126, 95, 0.4);
-}
+      .secondary-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+        transform: translateY(-3px);
+      }
 
-.secondary-button {
-  display: inline-block;
-  background-color: transparent;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 13px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  transition: all 0.3s ease;
-}
+      .cta-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+      }
 
-.secondary-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
-  transform: translateY(-3px);
-}
+      .shape-1 {
+        position: absolute;
+        top: -100px;
+        right: -50px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        filter: blur(60px);
+      }
 
-/* Decorative Elements */
-.cta-decoration {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
+      .shape-2 {
+        position: absolute;
+        bottom: -150px;
+        left: -80px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: rgba(255, 126, 95, 0.1);
+        filter: blur(80px);
+      }
 
-.shape-1 {
-  position: absolute;
-  top: -100px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  filter: blur(60px);
-}
+      @media (max-width: 768px) {
+        .cta-section {
+          padding: 60px 0;
+        }
+        
+        .cta-title {
+          font-size: 32px;
+        }
+        
+        .cta-subtitle {
+          font-size: 16px;
+          margin-bottom: 25px;
+        }
+        
+        .primary-button, .secondary-button {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        
+        .cta-buttons {
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+          max-width: 320px;
+          margin: 0 auto;
+        }
+      }
 
-.shape-2 {
-  position: absolute;
-  bottom: -150px;
-  left: -80px;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: rgba(255, 126, 95, 0.1);
-  filter: blur(80px);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .cta-section {
-    padding: 60px 0;
-  }
-  
-  .cta-title {
-    font-size: 32px;
-  }
-  
-  .cta-subtitle {
-    font-size: 16px;
-    margin-bottom: 25px;
-  }
-  
-  .primary-button, .secondary-button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .cta-title {
-    font-size: 28px;
-  }
-}
+      @media (max-width: 480px) {
+        .cta-title {
+          font-size: 28px;
+        }
+      }
     </style>
     <link
       href="./assets/images/logo(100x100).svg"
@@ -379,283 +370,11 @@
                       <div class="primary-button-text-wrap hover">
                         <div class="primary-button-text">Contact Us Now</div>
                       </div>
-                    </div></a
-                  >
+                    </div></a>
                 </div>
               </div>
             </nav>
             <div class="nav-right-wrap">
-              <div
-                data-open-product=""
-                data-wf-cart-type="leftSidebar"
-                data-wf-cart-query="query Dynamo2 {
-    database {
-      id
-      commerceOrder {
-        comment
-        extraItems {
-          name
-          pluginId
-          pluginName
-          price {
-            value
-            unit
-            decimalValue
-            string
-          }
-        }
-        id
-        startedOn
-        statusFlags {
-          hasDownloads
-          hasSubscription
-          isFreeOrder
-          requiresShipping
-        }
-        subtotal {
-          value
-          unit
-          decimalValue
-          string
-        }
-        total {
-          value
-          unit
-          decimalValue
-          string
-        }
-        updatedOn
-        userItems {
-          count
-          id
-          price {
-            value
-            unit
-            decimalValue
-            string
-          }
-          product {
-            id
-            cmsLocaleId
-            f__draft_0ht
-            f__archived_0ht
-            f_name_
-            f_sku_properties_3dr {
-              id
-              name
-              enum {
-                id
-                name
-                slug
-              }
-            }
-          }
-          rowTotal {
-            value
-            unit
-            decimalValue
-            string
-          }
-          sku {
-            cmsLocaleId
-            f__draft_0ht
-            f__archived_0ht
-            f_sku_values_3dr {
-              property {
-                id
-              }
-              value {
-                id
-              }
-            }
-            id
-          }
-          subscriptionFrequency
-          subscriptionInterval
-          subscriptionTrial
-        }
-        userItemsCount
-      }
-    }
-    site {
-      id
-      commerce {
-        businessAddress {
-          country
-        }
-        defaultCountry
-        defaultCurrency
-        quickCheckoutEnabled
-      }
-    }
-  }"
-                data-wf-page-link-href-prefix=""
-                class="w-commerce-commercecartwrapper"
-                data-node-type="commerce-cart-wrapper"
-              >
-                <div
-                  style="display: none"
-                  class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-leftSidebar cart-wrapper"
-                  data-node-type="commerce-cart-container-wrapper"
-                >
-                  <div
-                    data-node-type="commerce-cart-container"
-                    role="dialog"
-                    class="w-commerce-commercecartcontainer cart-container"
-                  >
-                    <div class="w-commerce-commercecartheader cart-header">
-                      <h3 class="w-commerce-commercecartheading cart-title">
-                        Your Cart
-                      </h3>
-                      <a
-                        class="w-commerce-commercecartcloselink cart-close-button-icon w-inline-block"
-                        role="button"
-                        aria-label="Close cart"
-                        data-node-type="commerce-cart-close-link"
-                        ><img
-                          loading="lazy"
-                          src="https://cdn.prod.website-files.com/6768154eebf492dd9e629220/6768154eebf492dd9e62939d_Times.svg"
-                          alt=""
-                          class="cart-close-icon"
-                      /></a>
-                    </div>
-                    <div class="w-commerce-commercecartformwrapper">
-                      <form
-                        style="display: none"
-                        class="w-commerce-commercecartform"
-                        data-node-type="commerce-cart-form"
-                      >
-                        <script
-                          type="text/x-wf-template"
-                          id="wf-template-8a994cc3-8c6f-d4b5-3dc8-f670b66150a4"
-                        >
-                          %3Cdiv%20class%3D%22w-commerce-commercecartitem%20cart-item%22%3E%3Cdiv%20class%3D%22w-commerce-commercecartiteminfo%20cart-contents%22%3E%3Ca%20href%3D%22%23%22%20class%3D%22cart-priceing-name-link%20w-inline-block%22%3E%3Cdiv%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_name_%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartproductname%20cart-pricing-name%20w-dyn-bind-empty%22%3E%3C%2Fdiv%3E%3C%2Fa%3E%3Cdiv%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePrice%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522price%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.price%2522%257D%257D%255D%22%20class%3D%22cart-price%22%3E%24%C2%A00.00%C2%A0USD%3C%2Fdiv%3E%3Cscript%20type%3D%22text%2Fx-wf-template%22%20id%3D%22wf-template-8a994cc3-8c6f-d4b5-3dc8-f670b66150ac%22%3E%253Cli%253E%253Cspan%2520data-wf-bindings%253D%2522%25255B%25257B%252522innerHTML%252522%25253A%25257B%252522type%252522%25253A%252522PlainText%252522%25252C%252522filter%252522%25253A%25257B%252522type%252522%25253A%252522identity%252522%25252C%252522params%252522%25253A%25255B%25255D%25257D%25252C%252522dataPath%252522%25253A%252522database.commerceOrder.userItems%25255B%25255D.product.f_sku_properties_3dr%25255B%25255D.name%252522%25257D%25257D%25255D%2522%2520class%253D%2522w-dyn-bind-empty%2522%253E%253C%252Fspan%253E%253Cspan%253E%253A%2520%253C%252Fspan%253E%253Cspan%2520data-wf-bindings%253D%2522%25255B%25257B%252522innerHTML%252522%25253A%25257B%252522type%252522%25253A%252522CommercePropValues%252522%25252C%252522filter%252522%25253A%25257B%252522type%252522%25253A%252522identity%252522%25252C%252522params%252522%25253A%25255B%25255D%25257D%25252C%252522dataPath%252522%25253A%252522database.commerceOrder.userItems%25255B%25255D.product.f_sku_properties_3dr%25255B%25255D%252522%25257D%25257D%25255D%2522%2520class%253D%2522w-dyn-bind-empty%2522%253E%253C%252Fspan%253E%253C%252Fli%253E%3C%2Fscript%3E%3Cul%20data-wf-bindings%3D%22%255B%257B%2522optionSets%2522%253A%257B%2522type%2522%253A%2522CommercePropTable%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%5B%5D%2522%257D%257D%252C%257B%2522optionValues%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.f_sku_values_3dr%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartoptionlist%20option-list%22%20data-wf-collection%3D%22database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%22%20data-wf-template-id%3D%22wf-template-8a994cc3-8c6f-d4b5-3dc8-f670b66150ac%22%3E%3Cli%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%257D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%257D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3C%2Fli%3E%3C%2Ful%3E%3Cdiv%20class%3D%22cart-quantity-flex%22%3E%3Cinput%20aria-label%3D%22Update%20quantity%22%20data-wf-bindings%3D%22%255B%257B%2522value%2522%253A%257B%2522type%2522%253A%2522Number%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522numberPrecision%2522%252C%2522params%2522%253A%255B%25220%2522%252C%2522numberPrecision%2522%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.count%2522%257D%257D%252C%257B%2522data-commerce-sku-id%2522%253A%257B%2522type%2522%253A%2522ItemRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.id%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartquantity%20cart-quantity-box%22%20required%3D%22%22%20pattern%3D%22%5E%5B0-9%5D%2B%24%22%20inputMode%3D%22numeric%22%20type%3D%22number%22%20name%3D%22quantity%22%20autoComplete%3D%22off%22%20data-wf-cart-action%3D%22update-item-quantity%22%20data-commerce-sku-id%3D%22%22%20value%3D%221%22%2F%3E%3Ca%20href%3D%22%23%22%20role%3D%22button%22%20data-wf-bindings%3D%22%255B%257B%2522data-commerce-sku-id%2522%253A%257B%2522type%2522%253A%2522ItemRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.id%2522%257D%257D%255D%22%20class%3D%22cart-remove-button%20w-inline-block%22%20data-wf-cart-action%3D%22remove-item%22%20data-commerce-sku-id%3D%22%22%20aria-label%3D%22Remove%20item%20from%20cart%22%3E%3Cdiv%3ERemove%3C%2Fdiv%3E%3C%2Fa%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3C%2Fdiv%3E
-                        </script>
-                        <div
-                          class="w-commerce-commercecartlist cart-list"
-                          data-wf-collection="database.commerceOrder.userItems"
-                          data-wf-template-id="wf-template-8a994cc3-8c6f-d4b5-3dc8-f670b66150a4"
-                        >
-                          <div class="w-commerce-commercecartitem cart-item">
-                            <div
-                              class="w-commerce-commercecartiteminfo cart-contents"
-                            >
-                              <a
-                                href="#"
-                                class="cart-priceing-name-link w-inline-block"
-                                ><div
-                                  data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_name_%22%7D%7D%5D"
-                                  class="w-commerce-commercecartproductname cart-pricing-name w-dyn-bind-empty"
-                                ></div
-                              ></a>
-                              <div
-                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.price%22%7D%7D%5D"
-                                class="cart-price"
-                              >
-                                $ 0.00 USD
-                              </div>
-                              <script
-                                type="text/x-wf-template"
-                                id="wf-template-8a994cc3-8c6f-d4b5-3dc8-f670b66150ac"
-                              >
-                                %3Cli%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%257D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%257D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3C%2Fli%3E
-                              </script>
-                              <ul
-                                data-wf-bindings="%5B%7B%22optionSets%22%3A%7B%22type%22%3A%22CommercePropTable%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr[]%22%7D%7D%2C%7B%22optionValues%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_sku_values_3dr%22%7D%7D%5D"
-                                class="w-commerce-commercecartoptionlist option-list"
-                                data-wf-collection="database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr"
-                                data-wf-template-id="wf-template-8a994cc3-8c6f-d4b5-3dc8-f670b66150ac"
-                              >
-                                <li>
-                                  <span
-                                    data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr%5B%5D.name%22%7D%7D%5D"
-                                    class="w-dyn-bind-empty"
-                                  ></span
-                                  ><span>: </span
-                                  ><span
-                                    data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr%5B%5D%22%7D%7D%5D"
-                                    class="w-dyn-bind-empty"
-                                  ></span>
-                                </li>
-                              </ul>
-                              <div class="cart-quantity-flex">
-                                <input
-                                  aria-label="Update quantity"
-                                  data-wf-bindings="%5B%7B%22value%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.count%22%7D%7D%2C%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
-                                  class="w-commerce-commercecartquantity cart-quantity-box"
-                                  required=""
-                                  pattern="^[0-9]+$"
-                                  inputmode="numeric"
-                                  type="number"
-                                  name="quantity"
-                                  autocomplete="off"
-                                  data-wf-cart-action="update-item-quantity"
-                                  data-commerce-sku-id=""
-                                  value="1"
-                                /><a
-                                  href="#"
-                                  role="button"
-                                  data-wf-bindings="%5B%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
-                                  class="cart-remove-button w-inline-block"
-                                  data-wf-cart-action="remove-item"
-                                  data-commerce-sku-id=""
-                                  aria-label="Remove item from cart"
-                                  ><div>Remove</div></a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="w-commerce-commercecartfooter cart-footer">
-                          <div
-                            aria-live="polite"
-                            aria-atomic="true"
-                            class="w-commerce-commercecartlineitem cart-line-item"
-                          >
-                            <div class="cart-subtotal-text">Subtotal</div>
-                            <div
-                              data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.subtotal%22%7D%7D%5D"
-                              class="w-commerce-commercecartordervalue cart-subtotal-text"
-                            ></div>
-                          </div>
-                          <div>
-                            <a
-                              href="/checkout"
-                              value="Continue to Checkout"
-                              class="w-commerce-commercecartcheckoutbutton form-button"
-                              data-loading-text="Hang Tight..."
-                              data-node-type="cart-checkout-button"
-                              >Continue to Checkout</a
-                            >
-                          </div>
-                        </div>
-                      </form>
-                      <div class="w-commerce-commercecartemptystate">
-                        <div aria-label="This cart is empty" aria-live="polite">
-                          No items found.
-                        </div>
-                      </div>
-                      <div
-                        aria-live="assertive"
-                        style="display: none"
-                        data-node-type="commerce-cart-error"
-                        class="w-commerce-commercecarterrorstate"
-                      >
-                        <div
-                          class="w-cart-error-msg"
-                          data-w-cart-quantity-error="Product is not available in this quantity."
-                          data-w-cart-general-error="Something went wrong when adding this item to the cart."
-                          data-w-cart-checkout-error="Checkout is disabled on this site."
-                          data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
-                          data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
-                        >
-                          Product is not available in this quantity.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="nav-button-wrap">
                 <a href="./contact.html" class="primary-button w-inline-block"
                   ><div href="#" class="primary-button-flex navbar">
@@ -980,244 +699,10 @@
                 </div>
               </div>
             </div>
-            <!-- <div
-              data-w-id="a6d1352d-228d-f617-537d-9bcc0916bd74"
-              style="opacity: 0"
-              class="single-about-summery-wrap"
-            >
-              <div class="about-summery-content-wrap">
-                <div class="about-summery-title">AWARDS</div>
-                <div class="summery-counter-wrap">
-                  <div class="single-counter-wrap _1">
-                    <h3 class="number-digit">0</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">6</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">9</h3>
-                  </div>
-                  <div class="single-counter-wrap _2">
-                    <h3 class="number-digit">9</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">7</h3>
-                    <h3 class="number-digit">9</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">0</h3>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div
-              data-w-id="6d5cb662-7e77-f173-ad45-aab39902253d"
-              style="opacity: 0"
-              class="single-about-summery-wrap"
-            >
-              <div class="about-summery-content-wrap">
-                <div class="about-summery-title">DESIGNERS</div>
-                <div class="summery-counter-wrap">
-                  <div class="single-counter-wrap _1">
-                    <h3 class="number-digit">0</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">6</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">9</h3>
-                  </div>
-                  <div class="single-counter-wrap _2">
-                    <h3 class="number-digit">9</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">7</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">0</h3>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </section>
-      <!-- <section class="section works">
-        <div class="container">
-          <div class="section-title-wrapper">
-            <div class="bullet-flex-wrap">
-              <div class="vertical-bullet"></div>
-            </div>
-            <div class="secion-title-flex-wrap">
-              <div class="horizontal-bullet left big"></div>
-              <div class="section-title-content-wrap works">
-                <h2 class="section-title">
-                  Featured <span class="text-color-primary">Projects</span>
-                  <span class="section-title-black">23’24</span>
-                </h2>
-              </div>
-              <div class="horizontal-bullet right big"></div>
-            </div>
-            <div class="section-title-info-flex-wrap">
-              <div class="split-content">
-                <div class="sub-title-wrap">
-                  <div class="section-sub-title">
-                    <span class="section-sub-title-marked">/</span> our works
-                  </div>
-                </div>
-              </div>
-              <div class="split-content">
-                <div class="section-info-wrap">
-                  <div class="section-info-details">
-                    Scroll to explore 3 works
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="works-wrapper">
-            <div class="work-collection-wrap w-dyn-list">
-              <div role="list" class="works-flex-wrap w-dyn-items">
-                <div role="listitem" class="w-dyn-item">
-                  <div
-                    data-w-id="03b94e3a-3fc5-eb61-1a74-9765acd81110"
-                    class="single-works-wrap"
-                  >
-                    <div class="works-image-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677932e1c64d03c9eeddb02f_Work-Img-4.jpg"
-                        loading="lazy"
-                        alt=""
-                        sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 1439px) 97vw, 1296px"
-                        srcset="
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677932e1c64d03c9eeddb02f_Work-Img-4-p-500.jpg   500w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677932e1c64d03c9eeddb02f_Work-Img-4-p-800.jpg   800w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677932e1c64d03c9eeddb02f_Work-Img-4-p-1080.jpg 1080w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677932e1c64d03c9eeddb02f_Work-Img-4.jpg        1296w
-                        "
-                        class="works-image"
-                      />
-                    </div>
-                    <a
-                      href="./works.html/spectrum-studio"
-                      class="project-button-wrap w-inline-block"
-                      ><div class="project-button-text-wrap">
-                        <div class="project-button-text">See this project</div>
-                      </div></a
-                    >
-                    <div class="work-name-flex-wrap home">
-                      <a
-                        href="./works.html/spectrum-studio"
-                        class="work-name-wrap w-inline-block"
-                        ><div class="work-name-text white">
-                          Spectrum Studio
-                        </div></a
-                      >
-                      <div class="work-name-divider-slash white">/</div>
-                      <div class="work-services white">
-                        UI/UX Design, Development
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div role="listitem" class="w-dyn-item">
-                  <div
-                    data-w-id="03b94e3a-3fc5-eb61-1a74-9765acd81110"
-                    class="single-works-wrap"
-                  >
-                    <div class="works-image-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778de103ed9bf46a864e800_Work-Img-5.jpg"
-                        loading="lazy"
-                        alt=""
-                        sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 1439px) 97vw, 1296px"
-                        srcset="
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778de103ed9bf46a864e800_Work-Img-5-p-500.jpg   500w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778de103ed9bf46a864e800_Work-Img-5-p-800.jpg   800w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778de103ed9bf46a864e800_Work-Img-5-p-1080.jpg 1080w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778de103ed9bf46a864e800_Work-Img-5.jpg        1296w
-                        "
-                        class="works-image"
-                      />
-                    </div>
-                    <a
-                      href="./works.html/prism-pulse"
-                      class="project-button-wrap w-inline-block"
-                      ><div class="project-button-text-wrap">
-                        <div class="project-button-text">See this project</div>
-                      </div></a
-                    >
-                    <div class="work-name-flex-wrap home">
-                      <a
-                        href="./works.html/prism-pulse"
-                        class="work-name-wrap w-inline-block"
-                        ><div class="work-name-text white">Prism Pulse</div></a
-                      >
-                      <div class="work-name-divider-slash white">/</div>
-                      <div class="work-services white">
-                        UI/UX Design, Development
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div role="listitem" class="w-dyn-item">
-                  <div
-                    data-w-id="03b94e3a-3fc5-eb61-1a74-9765acd81110"
-                    class="single-works-wrap"
-                  >
-                    <div class="works-image-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778ddb0323c341c6b003957_Work-Img-6.jpg"
-                        loading="lazy"
-                        alt=""
-                        sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 1439px) 97vw, 1296px"
-                        srcset="
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778ddb0323c341c6b003957_Work-Img-6-p-500.jpg   500w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778ddb0323c341c6b003957_Work-Img-6-p-800.jpg   800w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778ddb0323c341c6b003957_Work-Img-6-p-1080.jpg 1080w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/6778ddb0323c341c6b003957_Work-Img-6.jpg        1296w
-                        "
-                        class="works-image"
-                      />
-                    </div>
-                    <a
-                      href="./works.html/mosaic-motion"
-                      class="project-button-wrap w-inline-block"
-                      ><div class="project-button-text-wrap">
-                        <div class="project-button-text">See this project</div>
-                      </div></a
-                    >
-                    <div class="work-name-flex-wrap home">
-                      <a
-                        href="./works.html/mosaic-motion"
-                        class="work-name-wrap w-inline-block"
-                        ><div class="work-name-text white">
-                          Mosaic Motion
-                        </div></a
-                      >
-                      <div class="work-name-divider-slash white">/</div>
-                      <div class="work-services white">
-                        UI/UX Design, Development
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+      
       <section class="section service">
         <div class="container">
           <div class="section-title-wrapper">
@@ -1385,7 +870,6 @@
           <h2 class="section-title">Why Choose PixelateNest?</h2>
           
           <div class="services-cards">
-            <!-- Card 1 -->
             <div class="service-card">
               <div class="card-icon">
                 <i class="fas fa-laptop-code"></i>
@@ -1393,8 +877,6 @@
               <h3>Web & App Development</h3>
               <p>Customized solutions tailored to your specific business needs and goals.</p>
             </div>
-            
-            <!-- Card 2 -->
             <div class="service-card">
               <div class="card-icon">
                 <i class="fas fa-video"></i>
@@ -1402,8 +884,6 @@
               <h3>Video Editing</h3>
               <p>Professional video services to help your content stand out from the competition.</p>
             </div>
-            
-            <!-- Card 3 -->
             <div class="service-card">
               <div class="card-icon">
                 <i class="fas fa-paint-brush"></i>
@@ -1411,8 +891,6 @@
               <h3>Branding & Design</h3>
               <p>Unique visual identity creation that resonates with your target audience.</p>
             </div>
-            
-            <!-- Card 4 -->
             <div class="service-card">
               <div class="card-icon">
                 <i class="fas fa-rocket"></i>
@@ -1420,8 +898,6 @@
               <h3>Fast Delivery</h3>
               <p>Quick turnaround times without compromising on quality or attention to detail.</p>
             </div>
-            
-            <!-- Card 5 -->
             <div class="service-card">
               <div class="card-icon">
                 <i class="fas fa-headset"></i>
@@ -1712,81 +1188,6 @@
                     </div>
                   </div>
                 </div>
-                <!--div class="testimonial-slider-item w-slide">
-                  <div class="single-testimonial-wrap">
-                    <div class="testimonial-flex">
-                      <div class="testimonial-image-wrap">
-                        <img
-                          src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677fb3cecf140f70b2c48f5a_Testimonial-Image-4.jpg"
-                          loading="lazy"
-                          alt=""
-                          class="testimonial-image"
-                        /><img
-                          src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67765baa8985f3df0f5cc4d7_Testimonial-Icon-1.svg"
-                          loading="lazy"
-                          alt=""
-                          class="testimonial-icon"
-                        />
-                      </div>
-                      <div class="testimonial-details-wrap">
-                        <div class="testimonial-details-contents">
-                          <div class="testimonial-review-flex-wrap">
-                            <img
-                              src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
-                              loading="lazy"
-                              alt=""
-                              class="review-star"
-                            /><img
-                              src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
-                              loading="lazy"
-                              alt=""
-                              class="review-star"
-                            /><img
-                              src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
-                              loading="lazy"
-                              alt=""
-                              class="review-star"
-                            /><img
-                              src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
-                              loading="lazy"
-                              alt=""
-                              class="review-star"
-                            /><img
-                              src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
-                              loading="lazy"
-                              alt=""
-                              class="review-star"
-                            />
-                          </div>
-                          <p class="testimonial-details">
-                            &quot;Referred by a friend, their Shopify expertise
-                            and transparent pricing were exactly what we needed
-                            for our site launch.&quot;
-                          </p>
-                          <div class="testimonial-author-wrap">
-                            <img
-                              src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/6783c81427f7eb0e7cbcffe8_Customer-2.png"
-                              loading="lazy"
-                              alt=""
-                              class="testimonial-author-img"
-                            />
-                            <div class="testimonial-author-info-wrap">
-                              <h5 class="testimonial-author-name">
-                                Emily Carter
-                              </h5>
-                              <div class="testimonial-author-info">
-                                <span class="testimonial-author-info-mark"
-                                  >/</span
-                                >
-                                COO
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
               <div class="display-none w-slider-arrow-left">
                 <div class="w-icon-slider-left"></div>
@@ -2011,12 +1412,9 @@
                     <div class="faq-accordion-content-wrap">
                       <p class="faq-accordion-ans">
                         <b>Project timelines vary depending on the scope and complexity.</b><br><br>
-
-Web & App Development: Typically 3 to 8 weeks, depending on features and integrations.<br><br>
-
-Video Editing: Ranges from a few days to 2 weeks based on length and style.<br><br>
-
-Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoing optimization.
+                          Web & App Development: Typically 3 to 8 weeks, depending on features and integrations.<br><br>
+                          Video Editing: Ranges from a few days to 2 weeks based on length and style.<br><br>
+                          Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoing optimization.
                       </p>
                     </div>
                   </nav>
@@ -2066,17 +1464,13 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                       <p class="faq-accordion-ans">
                         <b>At Pixelate Nest, we consider a project to continue ongoing when it is launched. To guarantee that your website, app, or campaign keeps operating at its peak, we provide continuous support and upkeep. This comprises:</b><br><br>
                         •Bug fixes and updates<br><br>
-
-•Performance monitoring<br><br>
-
-•Content or design adjustments<br><br>
-
-•Marketing tweaks and strategy optimization<br><br>
+                        •Performance monitoring<br><br>
+                        •Content or design adjustments<br><br>
+                        •Marketing tweaks and strategy optimization<br><br>
                       </p>
                     </div>
                   </nav>
                 </div>
-                
           </div>
         </div>
       </section>
@@ -2111,8 +1505,6 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
       
               <div data-delay="1000" data-animation="slide" class="slider blogs w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="0" data-duration="500" data-infinite="true">
                 <div class="blog-slide-mask w-slider-mask">
-      
-                  <!-- Slide 1 -->
                   <div class="single-blog-slide w-slide">
                     <div class="single-blog-wrapper">
                       <a href="./blog.htmls/step-by-step-guide-to-start-a-business-in-2024" class="blog-image-wrap home w-inline-block">
@@ -2128,8 +1520,6 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                       </div>
                     </div>
                   </div>
-      
-                  <!-- Slide 2 -->
                   <div class="single-blog-slide w-slide">
                     <div class="single-blog-wrapper">
                       <a href="./blog.htmls/how-to-start-a-video-editing-agency-from-scratch" class="blog-image-wrap home w-inline-block">
@@ -2142,12 +1532,9 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                         <p class="blog-description">
                             Are you considering launching a company that edits videos? Here's how to start a creative firm from scratch, develop your brand, and attract clients.
                         </p>
-                        
                       </div>
                     </div>
                   </div>
-      
-                  <!-- Slide 3 -->
                   <div class="single-blog-slide w-slide">
                     <div class="single-blog-wrapper">
                       <a href="./blog.htmls/how-to-start-content-creation-in-2024" class="blog-image-wrap home w-inline-block">
@@ -2160,12 +1547,9 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                         <p class="blog-description">
                             Learn how to become a content producer in 2025, including platform advice, necessary tools, and strategies for increasing your audience's size.
                         </p>
-                        
                       </div>
                     </div>
                   </div>
-      
-                  <!-- Slide 4 -->
                   <div class="single-blog-slide w-slide">
                     <div class="single-blog-wrapper">
                       <a href="./blog.htmls/why-your-business-needs-a-website-in-2024" class="blog-image-wrap home w-inline-block">
@@ -2178,12 +1562,9 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                         <p class="blog-description">
                             Having a website is now required. Find out why establishing your online presence is crucial for 2025 growth, lead generation, and trust-building.
                         </p>
-                        
                       </div>
                     </div>
                   </div>
-      
-                  <!-- Slide 5 -->
                   <div class="single-blog-slide w-slide">
                     <div class="single-blog-wrapper">
                       <a href="./blog.htmls/top-video-editing-tools-in-2024" class="blog-image-wrap home w-inline-block">
@@ -2199,7 +1580,6 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                       </div>
                     </div>
                   </div>
-      
                 </div>
                 <div class="display-none w-slider-arrow-left"><div class="w-icon-slider-left"></div></div>
                 <div class="display-none w-slider-arrow-right"><div class="w-icon-slider-right"></div></div>
@@ -2230,336 +1610,6 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
           </div>
         </div>
       </section>
-      
-      
-      <!-- <section class="section solutions">
-        <div class="container">
-          <div class="section-title-wrapper process">
-            <div class="bullet-flex-wrap">
-              <div class="vertical-bullet"></div>
-            </div>
-            <div class="secion-title-flex-wrap">
-              <div class="horizontal-bullet left"></div>
-              <div class="section-title-content-wrap solutions">
-                <h2 class="section-title">
-                  Our <span class="text-color-primary">Solutions</span> For You
-                </h2>
-              </div>
-              <div class="horizontal-bullet right"></div>
-            </div>
-            <div class="section-title-info-flex-wrap">
-              <div class="split-content">
-                <div class="sub-title-wrap">
-                  <div class="section-sub-title">
-                    <span class="section-sub-title-marked">/</span> our process
-                  </div>
-                </div>
-              </div>
-              <div class="split-content">
-                <div class="section-info-wrap">
-                  <div class="section-info-details">
-                    Scroll to explore 4 process
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-w-id="ec601e44-7799-66ff-dbe0-7f2bbeeac283"
-            class="process-container"
-          >
-            <div class="all-process-flex-wrap">
-              <div class="single-process-wrap">
-                <div class="split-content">
-                  <div class="process-image-wrap">
-                    <img
-                      src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67762c6aebf0ae769cc41e41_Process-Img-1.jpg"
-                      loading="lazy"
-                      alt=""
-                      class="process-image"
-                    />
-                  </div>
-                </div>
-                <div class="split-content">
-                  <div class="process-content-wrap">
-                    <div class="process-icon-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677633801e6411276d6d1dda_Process-Icon-1.svg"
-                        loading="lazy"
-                        alt=""
-                        class="process-icon"
-                      />
-                    </div>
-                    <div class="process-details-wrapper">
-                      <h4 class="process-title">Discovery &amp; Strategy</h4>
-                      <p class="process-details">
-                        We start by understanding your goals, then develop a
-                        clear strategy to guide the project towards success.
-                      </p>
-                    </div>
-                    <ul role="list" class="process-list-wrap w-list-unstyled">
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">Client Meeting</div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Research market trends.
-                          </div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Create project roadmap.
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="single-process-wrap">
-                <div class="split-content">
-                  <div class="process-image-wrap">
-                    <img
-                      src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67762c6ad9bde47f0be90ad5_Process-Img-2.jpg"
-                      loading="lazy"
-                      alt=""
-                      class="process-image"
-                    />
-                  </div>
-                </div>
-                <div class="split-content">
-                  <div class="process-content-wrap">
-                    <div class="process-icon-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763380193d2d7acc0c0d6a_Process-Icon-2.svg"
-                        loading="lazy"
-                        alt=""
-                        class="process-icon"
-                      />
-                    </div>
-                    <div class="process-details-wrapper">
-                      <h4 class="process-title">Design &amp; Development</h4>
-                      <p class="process-details">
-                        We turn ideas into reality by designing intuitive
-                        interfaces and building robust, scalable solutions to
-                        bring your vision to life.
-                      </p>
-                    </div>
-                    <ul role="list" class="process-list-wrap w-list-unstyled">
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">Client Meeting</div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Research market trends.
-                          </div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Create project roadmap.
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="single-process-wrap">
-                <div class="split-content">
-                  <div class="process-image-wrap">
-                    <img
-                      src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67762c6a0dbd130e1f0929c8_Process-Img-3.jpg"
-                      loading="lazy"
-                      alt=""
-                      class="process-image"
-                    />
-                  </div>
-                </div>
-                <div class="split-content">
-                  <div class="process-content-wrap">
-                    <div class="process-icon-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763380a58d8b1fa0b97d99_Process-Icon-3.svg"
-                        loading="lazy"
-                        alt=""
-                        class="process-icon"
-                      />
-                    </div>
-                    <div class="process-details-wrapper">
-                      <h4 class="process-title">Testing &amp; Optimization</h4>
-                      <p class="process-details">
-                        We rigorously test and refine every aspect to ensure
-                        seamless performance and deliver an optimized
-                        experience.
-                      </p>
-                    </div>
-                    <ul role="list" class="process-list-wrap w-list-unstyled">
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">Client Meeting</div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Research market trends.
-                          </div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Create project roadmap.
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="single-process-wrap">
-                <div class="split-content">
-                  <div class="process-image-wrap">
-                    <img
-                      src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67762c6a518df1551e30fa6e_Process-Img-4.jpg"
-                      loading="lazy"
-                      alt=""
-                      class="process-image"
-                    />
-                  </div>
-                </div>
-                <div class="split-content">
-                  <div class="process-content-wrap">
-                    <div class="process-icon-wrap">
-                      <img
-                        src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677633807844b403615f7388_Process-Icon-4.svg"
-                        loading="lazy"
-                        alt=""
-                        class="process-icon"
-                      />
-                    </div>
-                    <div class="process-details-wrapper">
-                      <h4 class="process-title">Launch &amp; Support</h4>
-                      <p class="process-details">
-                        We launch your project with precision and provide
-                        ongoing support to ensure it continues to perform at its
-                        best.
-                      </p>
-                    </div>
-                    <ul role="list" class="process-list-wrap w-list-unstyled">
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">Client Meeting</div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Research market trends.
-                          </div>
-                        </div>
-                      </li>
-                      <li class="process-list-item">
-                        <div class="process-list-flex">
-                          <img
-                            src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677634babee722a845071f35_Process-List-Icon.svg"
-                            loading="lazy"
-                            alt=""
-                            class="process-list-icon"
-                          />
-                          <div class="process-list-details">
-                            Create project roadmap.
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="process-line-wrap">
-              <div class="process-line-inner"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-       -->
       <footer class="footer-wrapper">
         <div class="footer-top-wrapper">
           <div class="container">
@@ -2585,29 +1635,24 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                   <div class="footer-contact-info">pixelatenest@gmail.com</div>
                   <div class="footer-contact-info">Pixelate Nest</div>
                 </div>
-                <!-- <div class="footer-social-links-wrap">
+                <div class="footer-social-links-wrap">
                   <a
                     href="https://www.facebook.com/"
                     target="_blank"
                     class="single-social-link-wrap w-inline-block"
                     ><div></div></a
                   ><a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/pixelate.nest"
                     target="_blank"
                     class="single-social-link-wrap w-inline-block"
                     ><div></div></a
                   ><a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/company/pixelate-nest/?viewAsMember=true"
                     target="_blank"
                     class="single-social-link-wrap w-inline-block"
                     ><div></div></a
-                  ><a
-                    href="https://twitter.com/"
-                    target="_blank"
-                    class="single-social-link-wrap w-inline-block"
-                    ><div></div></a
                   >
-                </div> -->
+                </div>
               </div>
               <div
                 data-w-id="35840d97-77fd-45fe-5979-6908ca4c6ba2"
@@ -2664,14 +1709,13 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
       src="./assets/js/index.js"
       type="text/javascript"
     ></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T64KPYDX6P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T64KPYDX6P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-T64KPYDX6P');
-</script>
+      gtag('config', 'G-T64KPYDX6P');
+    </script>
   </body>
 </html>
