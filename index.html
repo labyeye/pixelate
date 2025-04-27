@@ -8,7 +8,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>Home - Pixelate Nest</title>
+    <title>Creative Web Development and Video Editing Agency | PixelateNest</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     
     <link
@@ -43,6 +43,274 @@
             (n.className += t + "touch");
       })(window, document);
     </script>
+         
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+          
+    <style>
+
+/* Services Section Styles */
+.services-section {
+  padding: 60px 0;
+}
+
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services-section .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #ec5b37;
+  position: relative;
+}
+
+.services-section .section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ec5b37;
+  margin: 15px auto 0;
+}
+
+/* Cards Layout */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Content */
+.card-icon {
+  font-size: 44px;
+  color: #ec5b37;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .service-card {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-cards {
+    gap: 20px;
+  }
+  
+  .service-card {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-cards {
+    gap: 15px;
+  }
+  
+  .service-card {
+    flex: 0 0 calc(50% - 15px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    flex: 0 0 100%;
+    max-width: 320px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+}
+/* Enhanced CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+}
+
+.cta-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  margin-bottom: 35px;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-button {
+  display: inline-block;
+  background-color: #ff7e5f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
+}
+
+.primary-button:hover {
+  background-color: #ff9d85;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(255, 126, 95, 0.4);
+}
+
+.secondary-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Decorative Elements */
+.cta-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shape-1 {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  filter: blur(60px);
+}
+
+.shape-2 {
+  position: absolute;
+  bottom: -150px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(255, 126, 95, 0.1);
+  filter: blur(80px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 0;
+  }
+  
+  .cta-title {
+    font-size: 32px;
+  }
+  
+  .cta-subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+  .primary-button, .secondary-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-title {
+    font-size: 28px;
+  }
+}
+    </style>
     <link
       href="./assets/images/logo(100x100).svg"
       rel="shortcut icon"
@@ -428,9 +696,9 @@
             class="banner-content-wrap"
           >
             <h1 class="banner-title">
-              Hi, We’re <span class="banner-title-marked">Nest!</span>
+              Creative<span class="banner-title-marked">Web Development & Video Editing</span> Agency for Growing Brands
             </h1>
-            <div class="banner-sub-title">Creative Agency</div>
+            <div class="banner-sub-title">We help businesses succeed through powerful websites, branding, and storytelling.</div>
           </div>
           <div class="bullet-flex-wrap">
             <div class="vertical-bullet banner"></div>
@@ -458,7 +726,7 @@
                     <img
                       src="https://media.wired.com/photos/60dcea818a1e88a03ed5ce04/master/pass/Gear-Beef-Up-Video-Editing-PC-1124258613.jpg"
                       loading="lazy"
-                      alt=""
+                      alt="Professional Video Editing Setup by PixelateNest"
                       class="banner-image"
                     />
                   </div>
@@ -482,7 +750,7 @@
                     <img
                       src="https://goodmockups.com/wp-content/uploads/2024/04/Free-Multiple-Screens-iPhone-15-UI-Mockup-PSD-Set-4.jpg"
                       loading="lazy"
-                      alt=""
+                      alt="UI/UX Mobile App Design Showcase by PixelateNest"
                       class="banner-image"
                     />
                   </div>
@@ -506,7 +774,7 @@
                     <img
                       src="https://media.istockphoto.com/id/1450969748/photo/developer-working-with-new-program.jpg?s=612x612&w=0&k=20&c=FTq2MTCXwMTJxGCA_8o7516KFDaNZ0WCxdZR5M--KYs="
                       loading="lazy"
-                      alt=""
+                      alt="Expert Web Developer at Work - PixelateNest"
                       class="banner-image"
                     />
                   </div>
@@ -530,7 +798,8 @@
                     <img
                       src="https://thediversitymovement.com/wp-content/uploads/2024/01/iStock-1481369283-scaled.jpg"
                       loading="lazy"
-                      alt=""
+                      alt="Creative Art and Branding Inspiration - PixelateNest
+                      "
                       class="banner-image"
                     />
                   </div>
@@ -554,7 +823,8 @@
                     <img
                       src="https://thumbs.dreamstime.com/b/abstract-design-made-human-profile-vivid-paint-shapes-subject-art-spirituality-form-brightly-colored-figures-319604636.jpg"
                       loading="lazy"
-                      alt=""
+                      alt="Team Collaboration and Strategy Session at PixelateNest
+                      "
                       class="banner-image"
                     />
                   </div>
@@ -959,18 +1229,15 @@
               >
                 <div class="section-sub-title mb-22">
                   <span class="section-sub-title-marked">/</span> our services
+                  
                 </div>
+                <p>At PixelateNest, we specialize in delivering high-quality web development, professional video editing, creative branding, and UI/UX design services. Let’s build your brand’s future together.</p>
+
                 <h2 class="section-title">
                   <span class="text-color-primary">You Request.</span> We Build!
                 </h2>
               </div>
-              <div class="split-content blog-right">
-                <div class="section-info-wrap">
-                  <div class="section-info-details">
-                    Scroll to explore 3 works
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
           <div class="services-wrap">
@@ -983,7 +1250,7 @@
                         <a
                           data-w-id="f5911cf1-ba27-8649-7314-07096ddc9791"
                           style="opacity: 0"
-                          href="./services.html/branding"
+                          href="./services.html"
                           class="service-name-wrap w-inline-block"
                           ><div class="service-name">Digital Marketing</div></a
                         >
@@ -991,12 +1258,12 @@
                       <div class="service-divider"></div>
                       <div class="service-image-wrap">
                         <a
-                          href="./services.html/branding"
+                          href="./services.html"
                           class="service-image-link w-inline-block"
                           ><img
                             src="https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg"
                             loading="lazy"
-                            alt=""
+                            alt="Digital Marketing Solutions by PixelateNest"
                             sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, 100vw"
                             srcset="
                               https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg 500w,
@@ -1015,7 +1282,7 @@
                         <a
                           data-w-id="f5911cf1-ba27-8649-7314-07096ddc9791"
                           style="opacity: 0"
-                          href="./services.html/web-design"
+                          href="./services.html"
                           class="service-name-wrap w-inline-block"
                           ><div class="service-name">
                             Web and App Development
@@ -1025,12 +1292,12 @@
                       <div class="service-divider"></div>
                       <div class="service-image-wrap">
                         <a
-                          href="./services.html/web-design"
+                          href="./services.html"
                           class="service-image-link w-inline-block"
                           ><img
                             src="https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp"
                             loading="lazy"
-                            alt=""
+                            alt="Professional Web and App Development Services"
                             sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, 100vw"
                             srcset="
                               https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp 500w,
@@ -1049,7 +1316,7 @@
                         <a
                           data-w-id="f5911cf1-ba27-8649-7314-07096ddc9791"
                           style="opacity: 0"
-                          href="./services.html/development"
+                          href="./services.html"
                           class="service-name-wrap w-inline-block"
                           ><div class="service-name">Video Editing</div></a
                         >
@@ -1057,12 +1324,13 @@
                       <div class="service-divider"></div>
                       <div class="service-image-wrap">
                         <a
-                          href="./services.html/development"
+                          href="./services.html"
                           class="service-image-link w-inline-block"
                           ><img
                             src="https://images.ctfassets.net/lzny33ho1g45/35fZshUUIbaorIAUHIbKXl/3a3fcd5e507f60e1004a8a3c59ccd56a/best-video-editing-software.jpg?w=1520&fm=jpg&q=31&fit=thumb&h=760"
                             loading="lazy"
-                            alt=""
+                            alt="High-Quality Video Editing Services by PixelateNest
+                            "
                             sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, 100vw"
                             srcset="
                               https://images.ctfassets.net/lzny33ho1g45/35fZshUUIbaorIAUHIbKXl/3a3fcd5e507f60e1004a8a3c59ccd56a/best-video-editing-software.jpg?w=1520&fm=jpg&q=31&fit=thumb&h=760 500w,
@@ -1081,7 +1349,7 @@
                         <a
                           data-w-id="f5911cf1-ba27-8649-7314-07096ddc9791"
                           style="opacity: 0"
-                          href="./services.html/development"
+                          href="./services.html"
                           class="service-name-wrap w-inline-block"
                           ><div class="service-name">VideoGraphy</div></a
                         >
@@ -1089,12 +1357,13 @@
                       <div class="service-divider"></div>
                       <div class="service-image-wrap">
                         <a
-                          href="./services.html/development"
+                          href="./services.html"
                           class="service-image-link w-inline-block"
                           ><img
                             src="https://barkingsquirrelmedia.com/wp-content/uploads/2023/04/kushagra-kevat-9ESAufvpgjI-unsplash.jpg"
                             loading="lazy"
-                            alt=""
+                            alt="Videography and Video Production Services by PixelateNest
+                            "
                             sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, 100vw"
                             srcset="
                               https://barkingsquirrelmedia.com/wp-content/uploads/2023/04/kushagra-kevat-9ESAufvpgjI-unsplash.jpg 500w,
@@ -1107,6 +1376,58 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-section">
+        <div class="container">
+          <h2 class="section-title">Why Choose PixelateNest?</h2>
+          
+          <div class="services-cards">
+            <!-- Card 1 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Web & App Development</h3>
+              <p>Customized solutions tailored to your specific business needs and goals.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3>Video Editing</h3>
+              <p>Professional video services to help your content stand out from the competition.</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>Branding & Design</h3>
+              <p>Unique visual identity creation that resonates with your target audience.</p>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Fast Delivery</h3>
+              <p>Quick turnaround times without compromising on quality or attention to detail.</p>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>Dedicated Support</h3>
+              <p>Our team is always ready to assist you with any questions or concerns.</p>
             </div>
           </div>
         </div>
@@ -1167,12 +1488,14 @@
                         <img
                           src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763be7f9a4fdbc2149e3d6_Testimonial-Image-1.jpg"
                           loading="lazy"
-                          alt=""
+                          alt="Happy Client - Website Design for Andaman Sapphire by PixelateNest
+                          "
                           class="testimonial-image"
                         /><img
                           src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67765baa8985f3df0f5cc4d7_Testimonial-Icon-1.svg"
                           loading="lazy"
-                          alt=""
+                          alt="Happy Client - Website Design for Andaman Sapphire by PixelateNest
+                          "
                           class="testimonial-icon"
                         />
                       </div>
@@ -1215,7 +1538,8 @@
                             <img
                               src="https://www.andamansapphire.in/assets/image/logo.png"
                               loading="lazy"
-                              alt=""
+                              alt="Happy Client - Website Design for Andaman Sapphire by PixelateNest
+                              "
                               class="testimonial-author-img"
                             />
                             <div class="testimonial-author-info-wrap">
@@ -1242,12 +1566,14 @@
                         <img
                           src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763be7d03e291a71b492d8_Testimonial-Image-2.jpg"
                           loading="lazy"
-                          alt=""
+                          alt="Client Review Icon - PixelateNest
+                          "
                           class="testimonial-image"
                         /><img
                           src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677fb3fc2b214449b0ae94ce_Testimonial-Icon-4.svg"
                           loading="lazy"
-                          alt=""
+                          alt="Client Review Icon - PixelateNest
+                          "
                           class="testimonial-icon"
                         />
                       </div>
@@ -1257,22 +1583,26 @@
                             <img
                               src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
                               loading="lazy"
-                              alt=""
+                              alt="Client Review Icon - PixelateNest
+                              "
                               class="review-star"
                             /><img
                               src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
                               loading="lazy"
-                              alt=""
+                              alt="Client Review Icon - PixelateNest
+                              "
                               class="review-star"
                             /><img
                               src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
                               loading="lazy"
-                              alt=""
+                              alt="Client Review Icon - PixelateNest
+                              "
                               class="review-star"
                             /><img
                               src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
                               loading="lazy"
-                              alt=""
+                              alt="Client Review Icon - PixelateNest
+                              "
                               class="review-star"
                             /><img
                               src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67763f032bc80405d0a584cf_Review-Star.svg"
@@ -1290,7 +1620,8 @@
                             <img
                               src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg"
                               loading="lazy"
-                              alt=""
+                              alt="Client Review Icon - PixelateNest
+                              "
                               class="testimonial-author-img"
                             />
                             <div class="testimonial-author-info-wrap">
@@ -1479,6 +1810,22 @@
                 </style>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta-section">
+        <div class="cta-container">
+          <div class="cta-content">
+            <h2 class="cta-title">Let's Build Your Brand Together!</h2>
+            <p class="cta-subtitle">Partner with us to transform your ideas into extraordinary digital experiences</p>
+            <div class="cta-buttons">
+              <a href="/contact.html" class="primary-button">Get a Free Consultation</a>
+              <a href="./works.html" class="secondary-button">View Our Work</a>
+            </div>
+          </div>
+          <div class="cta-decoration">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
           </div>
         </div>
       </section>
@@ -2280,7 +2627,8 @@ Digital Marketing Campaigns: Setup usually takes 1 to 2 weeks, followed by ongoi
                 ><img
                   src="./assets/images/logo(100x100).svg"
                   loading="lazy"
-                  alt=""
+                  alt="PixelateNest Creative Agency Logo
+                  "
                   class="footer-logo"
               /></a>
               <div class="split-content">
