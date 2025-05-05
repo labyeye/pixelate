@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'http://https://pixelate-n5pg.onrender.com/api/auth';
+const API_URL = 'https://pixelate-n5pg.onrender.com/api/auth';
 
 export default {
   login: async (username, password) => {
