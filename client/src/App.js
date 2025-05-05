@@ -1,10 +1,12 @@
+// App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import StaffDashboard from './pages/StaffDashboard';
 import ProtectedRoute from './pages/ProtectedRoute';
-
 import './App.css';
+import authService from './services/authService';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,7 +25,11 @@ function App() {
           <Route path="/" element={
             isAuthenticated ? (
               <ProtectedRoute>
-                <Dashboard setIsAuthenticated={setIsAuthenticated} />
+                {authService.isAdmin() ? (
+                  <AdminDashboard setIsAuthenticated={setIsAuthenticated} />
+                ) : (
+                  <StaffDashboard setIsAuthenticated={setIsAuthenticated} />
+                )}
               </ProtectedRoute>
             ) : (
               <Login setIsAuthenticated={setIsAuthenticated} />
