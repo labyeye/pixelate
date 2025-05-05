@@ -82,7 +82,7 @@ const AdminDashboard = ({ setIsAuthenticated }) => {
   const fetchContacts = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3500/api/contacts", {
+      const response = await axios.get("http://https://pixelate-n5pg.onrender.com/api/contacts", {
         headers: authService.authHeader(),
       });
       setContacts(response.data);
@@ -111,7 +111,7 @@ const AdminDashboard = ({ setIsAuthenticated }) => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       await axios.patch(
-        `http://localhost:3500/api/contacts/${id}`,
+        `http://https://pixelate-n5pg.onrender.com/api/contacts/${id}`,
         { status: newStatus },
         { headers: authService.authHeader() }
       );
