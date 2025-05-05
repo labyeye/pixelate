@@ -153,10 +153,10 @@
                     class="primary-button w-inline-block w--current"
                     ><div href="#" class="primary-button-flex navbar">
                       <div class="primary-button-text-wrap">
-                        <div class="primary-button-text">Contact Us Now</div>
+                        <div class="primary-button-text">Book a Call</div>
                       </div>
                       <div class="primary-button-text-wrap hover">
-                        <div class="primary-button-text">Contact Us Now</div>
+                        <div class="primary-button-text">Book a Call</div>
                       </div>
                     </div></a
                   >
@@ -171,10 +171,10 @@
                   class="primary-button w-inline-block w--current"
                   ><div href="#" class="primary-button-flex navbar">
                     <div class="primary-button-text-wrap">
-                      <div class="primary-button-text">Contact Us</div>
+                      <div class="primary-button-text">Book a Call</div>
                     </div>
                     <div class="primary-button-text-wrap hover">
-                      <div class="primary-button-text">Contact Us</div>
+                      <div class="primary-button-text">Book a Call</div>
                     </div>
                   </div></a
                 >
@@ -199,42 +199,135 @@
           </div>
         </div>
       </div>
-      <section class="section cta">
+      <!-- Replace the current CTA section with this form section -->
+      <section class="section contact-form-section">
         <div class="container">
-          <div
-            data-w-id="18448ee8-d51e-0790-3590-63a7a3a5abfb"
-            class="cta-content-wrap"
-          >
-            <div style="margin-top: 90px" class="cta-sub-title">
-              Let’ s Create Together
+          <div class="form-wrapper">
+            <h2>Contact Us</h2>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="purpose">Purpose of Contact</label>
+                <select id="purpose" name="purpose" required>
+                  <option value="">Select an option</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="video-editing">Video Editing</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="branding">Branding</option>
+                  <option value="consultation">Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+              <button type="submit" class="primary-button">Submit</button>
+            </form>
+            <div id="formSuccess" class="success-message" style="display: none">
+              Thank you for contacting us! We'll get back to you soon.
             </div>
-            <h1 class="contact-page-main-title">
-              Get in Touch with PixelateNest
-            </h1>
-            <p style="color: white">
-              We’re excited to hear from you! Whether you need a new website,
-              professional video editing, branding consultation, or digital
-              marketing services — the PixelateNest team is here to help. Fill
-              out the form below or reach out to us directly.
-            </p>
-
-            <a
-              href="./contact.html"
-              aria-current="page"
-              style="margin-top: 30px"
-              class="primary-button w-inline-block w--current"
-              ><div href="#" class="primary-button-flex">
-                <div class="primary-button-text-wrap">
-                  <div class="primary-button-text">Contact Us</div>
-                </div>
-                <div class="primary-button-text-wrap hover">
-                  <div class="primary-button-text">Contact Us</div>
-                </div>
-              </div></a
-            >
           </div>
         </div>
       </section>
+
+      <style>
+        .contact-form-section {
+          padding: 150px 0;
+          background-color: #f9f9f9;
+        }
+
+        .form-wrapper {
+          max-width: 600px;
+          margin: 0 auto;
+          background: white;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: 500;
+          color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+
+        .success-message {
+          background: #4caf50;
+          color: white;
+          padding: 15px;
+          border-radius: 4px;
+          text-align: center;
+          margin-top: 20px;
+        }
+      </style>
+
+      <script>
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              phone: document.getElementById("phone").value,
+              purpose: document.getElementById("purpose").value,
+              message: document.getElementById("message").value,
+            };
+
+            try {
+              const response = await fetch("http://localhost:3500/api/contacts", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              });
+
+              if (response.ok) {
+                document.getElementById("contactForm").style.display = "none";
+                document.getElementById("formSuccess").style.display = "block";
+                document.getElementById("contactForm").reset();
+              } else {
+                alert(
+                  "There was an error submitting the form. Please try again."
+                );
+              }
+            } catch (error) {
+              console.error("Error:", error);
+              alert(
+                "There was an error submitting the form. Please try again."
+              );
+            }
+          });
+      </script>
       <footer class="footer-wrapper">
         <div class="footer-top-wrapper">
           <div class="container">

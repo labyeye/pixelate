@@ -1,0 +1,38 @@
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import ProtectedRoute from './pages/ProtectedRoute';
+
+import './App.css';
+
+function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user && user.token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={
+            isAuthenticated ? (
+              <ProtectedRoute>
+                <Dashboard setIsAuthenticated={setIsAuthenticated} />
+              </ProtectedRoute>
+            ) : (
+              <Login setIsAuthenticated={setIsAuthenticated} />
+            )
+          } />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
