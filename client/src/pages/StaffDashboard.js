@@ -34,7 +34,7 @@ const StaffDashboard = ({ setIsAuthenticated }) => {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('https://pixelate-n5pg.onrender.com/api/contacts', {
+      const response = await axios.get('http://https://pixelate-n5pg.onrender.com/api/contacts', {
         headers: authService.authHeader()
       });
       setContacts(response.data);
@@ -61,7 +61,7 @@ const StaffDashboard = ({ setIsAuthenticated }) => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       await axios.patch(
-        `https://pixelate-n5pg.onrender.com/api/contacts/${id}`,
+        `http://https://pixelate-n5pg.onrender.com/api/contacts/${id}`,
         { status: newStatus },
         { headers: authService.authHeader() }
       );
