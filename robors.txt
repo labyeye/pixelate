@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /includes/
+
+Sitemap: https://www.pixelatenest.com/sitemap.xml
