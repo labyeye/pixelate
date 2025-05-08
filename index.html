@@ -62,6 +62,70 @@
       type="image/x-icon"
     />
     <link href="./assets/images/logo(100x100).svg" rel="apple-touch-icon" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Pixelate Nest",
+        "image": "https://www.pixelatenest.com/assets/images/logo(100x100).svg",
+        "@id": "https://www.pixelatenest.com",
+        "url": "https://www.pixelatenest.com",
+        "telephone": "+919234112345",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kala Bhawan Akharaghat Road",
+          "addressLocality": "Muzaffarpur",
+          "addressRegion": "Bihar",
+          "postalCode": "842001",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.instagram.com/pixelate.nest",
+          "https://www.linkedin.com/company/pixelate-nest"
+        ],
+        "description": "PixelateNest is a top-rated video editing and web development agency in India specializing in professional video production, custom websites, and app development.",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pixelate Nest",
+        "url": "https://www.pixelatenest.com",
+        "logo": "https://www.pixelatenest.com/assets/images/logo(100x100).svg",
+        "sameAs": [
+          "https://www.instagram.com/pixelate.nest",
+          "https://www.linkedin.com/company/pixelate-nest"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.pixelatenest.com/"
+          }
+        ]
+      }
+    </script>
+    <script>
+      // Handle 404 redirects for client-side routing
+      if (window.location.pathname !== '/' && !document.querySelector('.page-wrapper')) {
+        window.location.href = './404.html';
+      }
+    </script>
   </head>
   <body>
     <div class="page-wrapper">
