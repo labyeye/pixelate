@@ -19,7 +19,147 @@
     <meta content="Services - Pixelate Nest" property="og:title" />
     <meta content="Services - Pixelate Nest" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <style>
+      /* Services Section Styles */
+.services-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover .card-link {
+  color: white;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4ff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .card-icon {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
+
+.card-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.service-card p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.card-link {
+  display: inline-block;
+  color: #6e8efb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .card-link {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+    </style>
     <link
       href="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/css/spacir.webflow.5c0279056.css"
       rel="stylesheet"
@@ -124,7 +264,6 @@
               </div>
             </nav>
             <div class="nav-right-wrap">
-              
               <div class="nav-button-wrap">
                 <a href="./contact.html" class="primary-button w-inline-block"
                   ><div href="#" class="primary-button-flex navbar">
@@ -165,7 +304,7 @@
               Marketing & Branding
             </h1>
           </div>
-          <p>
+          <p style="text-align: center; font-size: 1.2rem; color: #666;margin-top: 30px;">
             At PixelateNest, we offer a full suite of creative services tailored
             to help your business grow. From custom web development and engaging
             video editing to powerful digital marketing and branding, we craft
@@ -173,193 +312,49 @@
           </p>
         </div>
       </section>
-      <section class="section after-inner-banner">
+      <section class="services-section">
         <div class="container">
-          <div class="all-service-wrap">
-            <div class="all-service-collection-list w-dyn-list">
-              <div role="list" class="all-service-flex-wrap w-dyn-items">
-                <div role="listitem" class="w-dyn-item">
-                  <div class="single-service-wrapper">
-                    <a
-                      data-w-id="ab9fc987-dd32-1a2b-aa47-e8772e883f65"
-                      href="./services.html/branding"
-                      class="service-image-wrapper w-inline-block"
-                      ><img
-                        src="https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677924a55ad33146f49b652e_Service-Single-Img-1.jpg"
-                        loading="lazy"
-                        alt="Video Editing and Post Production Services by PixelateNest
-                        "
-                        sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 1439px) 97vw, 1296px"
-                        srcset="
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677924a55ad33146f49b652e_Service-Single-Img-1-p-500.jpg   500w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677924a55ad33146f49b652e_Service-Single-Img-1-p-800.jpg   800w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677924a55ad33146f49b652e_Service-Single-Img-1-p-1080.jpg 1080w,
-                          https://cdn.prod.website-files.com/6778d13b633bd6ebc9552f81/677924a55ad33146f49b652e_Service-Single-Img-1.jpg        1296w
-                        "
-                        class="single-service-image"
-                    /></a>
-                    <div class="single-service-details-wrap">
-                      <div
-                        data-w-id="2286f231-bc20-5dee-2cb5-7405781ddcda"
-                        style="opacity: 0"
-                        class="single-service-details-grid"
-                      >
-                        <div class="split-content">
-                          <a href="#" class="service-name-wrap w-inline-block"
-                            ><div class="service-name">
-                              Video Editing & Post Production
-                            </div></a
-                          >
-                        </div>
-                        <div class="split-content">
-                          <div class="service-details-wrap">
-                            <p class="service-details">
-                              We provide polished, captivating video material
-                              that appeals to your viewers. From quick social
-                              media posts to dramatic marketing videos, our
-                              editors create images that make an impression.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="split-content">
-                          <div class="service-arrow-flex">
-                            <a
-                              href="#"
-                              class="service-arrow-wrap w-inline-block"
-                              ><img
-                                src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677bdd1dae567ac7c95de714_Service%20Arrow.svg"
-                                loading="lazy"
-                                alt=""
-                                class="service-arrow"
-                            /></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div role="listitem" class="w-dyn-item">
-                  <div class="single-service-wrapper">
-                    <a
-                      data-w-id="ab9fc987-dd32-1a2b-aa47-e8772e883f65"
-                      href="#"
-                      class="service-image-wrapper w-inline-block"
-                      ><img
-                        src="https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp"
-                        loading="lazy"
-                        alt="Web and Mobile App Development Services by PixelateNest
-                        "
-                        sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 1439px) 97vw, 1296px"
-                        srcset="
-                          https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp  500w,
-                          https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp  800w,
-                          https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp 1080w,
-                          https://media.bitcot.com/wp-content/uploads/2024/01/web-and-mobile-app-development.webp 1296w
-                        "
-                        class="single-service-image"
-                    /></a>
-                    <div class="single-service-details-wrap">
-                      <div
-                        data-w-id="2286f231-bc20-5dee-2cb5-7405781ddcda"
-                        style="opacity: 0"
-                        class="single-service-details-grid"
-                      >
-                        <div class="split-content">
-                          <a href="#" class="service-name-wrap w-inline-block"
-                            ><div class="service-name">
-                              Web and App Development
-                            </div></a
-                          >
-                        </div>
-                        <div class="split-content">
-                          <div class="service-details-wrap">
-                            <p class="service-details">
-                              We design and create digital products that work,
-                              from mobile applications to beautiful landing
-                              sites. We code with design and purpose, whether
-                              it's a brand website or a completely unique
-                              web/app solution.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="split-content">
-                          <div class="service-arrow-flex">
-                            <a
-                              href="#"
-                              class="service-arrow-wrap w-inline-block"
-                              ><img
-                                src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677bdd1dae567ac7c95de714_Service%20Arrow.svg"
-                                loading="lazy"
-                                alt=""
-                                class="service-arrow"
-                            /></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div role="listitem" class="w-dyn-item">
-                  <div class="single-service-wrapper">
-                    <a
-                      data-w-id="ab9fc987-dd32-1a2b-aa47-e8772e883f65"
-                      href="#"
-                      class="service-image-wrapper w-inline-block"
-                      ><img
-                        src="https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg"
-                        loading="lazy"
-                        alt="Digital Marketing Services for Business Growth by PixelateNest
-                        "
-                        sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 1439px) 97vw, 1296px"
-                        srcset="
-                          https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg  500w,
-                          https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg  800w,
-                          https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg 1080w,
-                          https://0qw52hln.cdn.imgeng.in/content/cms/images/blog/benefits-of-a-digital-marketing-agency.jpg 1296w
-                        "
-                        class="single-service-image"
-                    /></a>
-                    <div class="single-service-details-wrap">
-                      <div
-                        data-w-id="2286f231-bc20-5dee-2cb5-7405781ddcda"
-                        style="opacity: 0"
-                        class="single-service-details-grid"
-                      >
-                        <div class="split-content">
-                          <a href="#" class="service-name-wrap w-inline-block"
-                            ><div class="service-name">
-                              Digital Marketing
-                            </div></a
-                          >
-                        </div>
-                        <div class="split-content">
-                          <div class="service-details-wrap">
-                            <p class="service-details">
-                              To increase brand awareness and conversions, we
-                              combine data-driven tactics with imaginative
-                              storytelling. Allow us to assist you with both
-                              paid and organic growth.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="split-content">
-                          <div class="service-arrow-flex">
-                            <a
-                              href="./services.html/development"
-                              class="service-arrow-wrap w-inline-block"
-                              ><img
-                                src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677bdd1dae567ac7c95de714_Service%20Arrow.svg"
-                                loading="lazy"
-                                alt=""
-                                class="service-arrow"
-                            /></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  
+          
+          <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="Video Editing">
               </div>
+              <h3>Video Editing</h3>
+              <p>Professional video editing services for social media, marketing, and more.</p>
+              <a href="./services/video-editing.html" class="card-link">Learn More →</a>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Development">
+              </div>
+              <h3>Web Development</h3>
+              <p>Custom websites and web applications tailored to your business needs.</p>
+              <a href="./services/web-app-development.html" class="card-link">Learn More →</a>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/1968/1968641.png" alt="Digital Marketing">
+              </div>
+              <h3>Digital Marketing</h3>
+              <p>Data-driven marketing strategies to grow your online presence.</p>
+              <a href="./services/digital-marketing.html" class="card-link">Learn More →</a>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/1373/1373061.png" alt="Videography">
+              </div>
+              <h3>VideoGraphy</h3>
+              <p>Complete videography solutions to establish your unique identity.</p>
+              <a href="./services/videography.html" class="card-link">Learn More →</a>
             </div>
           </div>
         </div>
