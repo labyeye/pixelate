@@ -1185,8 +1185,7 @@ textarea.w-select {
     text-align: center;
     clear: both;
     -webkit-tap-highlight-color: #0000;
-    tap-highlight-color: #0000;
-    background: #ddd;
+      background: #ddd;
     height: 300px;
     position: relative;
 }
@@ -1216,8 +1215,7 @@ textarea.w-select {
     z-index: 2;
     text-align: center;
     -webkit-tap-highlight-color: #0000;
-    tap-highlight-color: #0000;
-    height: 40px;
+      height: 40px;
     margin: auto;
     padding-top: 10px;
     position: absolute;
@@ -1281,8 +1279,7 @@ textarea.w-select {
     cursor: pointer;
     color: #fff;
     -webkit-tap-highlight-color: #0000;
-    tap-highlight-color: #0000;
-    -webkit-user-select: none;
+      -webkit-user-select: none;
     user-select: none;
     width: 80px;
     margin: auto;
@@ -1928,8 +1925,7 @@ textarea.w-select {
     float: right;
     cursor: pointer;
     -webkit-tap-highlight-color: #0000;
-    tap-highlight-color: #0000;
-    -webkit-user-select: none;
+      -webkit-user-select: none;
     user-select: none;
     padding: 18px;
     font-size: 24px;
