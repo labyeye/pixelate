@@ -46187,7 +46187,7 @@ spurious results.`);
                 !!r.webkitFullscreenElement;
               e(t).attr("style", n ? "display: none !important;" : "");
             }
-            
+
             function p() {
               var e = o.children(s),
                 n = e.length && e.get(0) === t,
@@ -46205,10 +46205,7 @@ spurious results.`);
                 /\.webflow\.io$/i.test(i) && c.hostname !== i && (n = !0),
                   n &&
                     !u &&
-                    ((t = t),
-                    p(),
-                    setTimeout(p, 500),
-                    e(r).off(l, d).on(l, d));
+                    ((t = t), p(), setTimeout(p, 500), e(r).off(l, d).on(l, d));
               }),
               n
             );
