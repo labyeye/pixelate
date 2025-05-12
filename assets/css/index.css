@@ -1955,19 +1955,12 @@ a {
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.blog-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.5;
+}
 
 .images-wrapper {
   z-index: 10;
