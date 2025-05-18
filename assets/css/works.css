@@ -3418,10 +3418,9 @@ a {
 }
 
 .nav-menu-wrapper {
-    background-color: var(--white);
-    border-radius: 24px;
-    padding: 4px;
-    box-shadow: 0 0 12px #0000001f;
+  background-color: transparent;
+  border-radius: 24px;
+  padding: 4px;
 }
 
 .typography-details-flex {

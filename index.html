@@ -57,6 +57,10 @@
     <link rel="icon" href="./assets/images/favicon.ico" sizes="any" />
     <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"
+    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -116,12 +120,11 @@
       }
     </script>
     <script>
-      // Handle 404 redirects for client-side routing
       if (
         window.location.pathname !== "/" &&
         !document.querySelector(".page-wrapper")
       ) {
-        window.location.href = "./404.html";
+        window.location.href = "./index.html";
       }
     </script>
   </head>
@@ -155,7 +158,7 @@
                 ><a href="./about.html" class="single-nav-link w-inline-block"
                   ><div>About</div></a
                 ><a href="./works.html" class="single-nav-link w-inline-block"
-                  ><div>Works</div></a
+                  ><div>Projects</div></a
                 ><a
                   href="./services.html"
                   class="single-nav-link w-inline-block"
@@ -213,6 +216,14 @@
         </div>
       </div>
       <section id="Top" class="banner-section">
+        <div class="floating-circles">
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+        </div>
         <div class="container">
           <div
             data-w-id="a1b0f16d-b5ad-896d-d640-7ec008b96309"
@@ -232,114 +243,25 @@
           <div class="bullet-flex-wrap">
             <div class="vertical-bullet banner"></div>
           </div>
-          <div class="banner-images-wrapper">
-            <div class="horizontal-bullet left banner"></div>
-            <div class="banner-image-wrap">
-              <div class="images-wrapper">
-                <div class="image-container">
-                  <div
-                    class="banner-image-one a"
-                  >
-                    <img
-                      src="./assets/images/1.webp"
-                      loading="lazy"
-                      alt="Professional Video Editing Setup by PixelateNest"
-                      class="banner-image"
-                    />
-                  </div>
-                  <div
-                    class="banner-image-two b"
-                  >
-                    <img
-                      src="./assets/images/2.webp"
-                      loading="lazy"
-                      alt="UI/UX Mobile App Design Showcase by PixelateNest"
-                      class="banner-image"
-                    />
-                  </div>
-                  <div
-                    class="banner-image-three c"
-                  >
-                    <img
-                      src="./assets/images/3.webp"
-                      loading="lazy"
-                      alt="Expert Web Developer at Work - PixelateNest"
-                      class="banner-image"
-                    />
-                  </div>
-                  <div
-                    class="banner-image-five d"
-                  >
-                    <img
-                      src="./assets/images/4.webp"
-                      loading="lazy"
-                      alt="Creative Art and Branding Inspiration - PixelateNest
-                      "
-                      class="banner-image"
-                    />
-                  </div>
-                  <div
-                    class="banner-image-four e"
-                  >
-                    <img
-                      src="./assets/images/5.webp"
-                      loading="lazy"
-                      alt="Team Collaboration and Strategy Session at PixelateNest
-                      "
-                      class="banner-image"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="horizontal-bullet right banner"></div>
-          </div>
-          <div class="banner-bottom-wrap">
-            <div class="circle-button-wrapper">
-              <a
-                data-w-id="1cdfe418-c0e1-efa6-3cf2-be9e335e854b"
-                href="./works.html"
-                class="banner-circle-button-wrap w-inline-block h"
-                ><div class="banner-circle-text-wrap">
-                  <img
-                    src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/67751242d16c34a8681539df_Circle-Text.png"
-                    loading="lazy"
-                    alt="Circle"
-                    class="banner-circle-text"
-                  /><img
-                    src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677512bf1eeb62f2c3b7745f_Button-Arrow.svg"
-                    loading="lazy"
-                    alt="Arrow"
-                    class="circle-button-arrow"
-                  /></div
-              ></a>
-            </div>
-            <div
-              data-w-id="7535a767-6cc5-5b4e-0673-a31af8a1c31e"
-              class="banner-ticker-wrap"
-            >
-              <div class="banner-ticker-flex">
-                <div class="banner-ticker-item">
-                  <h2 class="banner-ticker-text">
-                    Pixelate Nest is a place where creativity may flourish.
-                  </h2>
-                </div>
-                <div class="banner-ticker-item">
-                  <h2 class="banner-ticker-text">
-                    Pixelate Nest is a place where creativity may flourish.
-                  </h2>
-                </div>
-                <div class="banner-ticker-item">
-                  <h2 class="banner-ticker-text">
-                    Pixelate Nest is a place where creativity may flourish.
-                  </h2>
-                </div>
-              </div>
+          <div class="spline-container-wrapper">
+            <div class="spline-container">
+              <spline-viewer
+                url="https://prod.spline.design/ILMHmb9zzFtKpeoa/scene.splinecode"
+              ></spline-viewer>
             </div>
           </div>
         </div>
       </section>
+
       <section class="section about-us">
+        <div class="floating-circles">
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+          <div class="floating-circle"></div>
+        </div>
         <div class="container">
           <div class="section-title-wrapper">
             <div class="secion-title-flex-wrap">
@@ -369,74 +291,6 @@
                 >
               </div>
               <div class="horizontal-bullet right about"></div>
-            </div>
-          </div>
-          <div class="about-summery-grid-wrap">
-            <div
-              data-w-id="24f25464-37dc-fe4f-5cdb-577cf24e2f21"
-              class="single-about-summery-wrap h"
-            >
-              <div class="about-summery-content-wrap">
-                <div class="about-summery-title">PROJECTS</div>
-                <div class="summery-counter-wrap">
-                  <div class="single-counter-wrap _1">
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">6</h3>
-                    <h3 class="number-digit">7</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">9</h3>
-                    <h3 class="number-digit">1</h3>
-                  </div>
-                  <div class="single-counter-wrap _2">
-                    <h3 class="number-digit">9</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">7</h3>
-                    <h3 class="number-digit">0</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">0</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              data-w-id="ddc0a00e-39b9-3b14-ec4e-9fcb7a0abb17"
-              class="single-about-summery-wrap h"
-            >
-              <div class="about-summery-content-wrap">
-                <div class="about-summery-title">CLIENTS</div>
-                <div class="summery-counter-wrap">
-                  <div class="single-counter-wrap _1">
-                    <h3 class="number-digit">0</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">6</h3>
-                    <h3 class="number-digit">0</h3>
-                    <h3 class="number-digit">0</h3>
-                    <h3 class="number-digit">9</h3>
-                  </div>
-                  <div class="single-counter-wrap _2">
-                    <h3 class="number-digit">9</h3>
-                    <h3 class="number-digit">8</h3>
-                    <h3 class="number-digit">7</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">5</h3>
-                    <h3 class="number-digit">4</h3>
-                    <h3 class="number-digit">3</h3>
-                    <h3 class="number-digit">2</h3>
-                    <h3 class="number-digit">1</h3>
-                    <h3 class="number-digit">3</h3>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -717,7 +571,6 @@
                       height="434"
                       loading="lazy"
                     />
-                    
                   </div>
                 </div>
                 <div class="client-review">
@@ -918,14 +771,10 @@
                 >
                   <div class="faq-accordion-link w-dropdown-toggle">
                     <div class="faq-accordion-title-wrap">
-                      <div
-                        class="faq-accordion-title f"
-                      >
+                      <div class="faq-accordion-title f">
                         What services do you offer?
                       </div>
-                      <div
-                        class="faq-icon-flex i"
-                      >
+                      <div class="faq-icon-flex i">
                         <img
                           loading="lazy"
                           src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677546aaebf0ae769c3c06f6_Faq-Icon.svg"
@@ -935,9 +784,7 @@
                       </div>
                     </div>
                   </div>
-                  <nav
-                    class="faq-accordion-ans-wrap w-dropdown-list g"
-                  >
+                  <nav class="faq-accordion-ans-wrap w-dropdown-list g">
                     <div class="faq-accordion-content-wrap">
                       <p class="faq-accordion-ans">
                         Through appealing video editing, creative site & app
@@ -957,14 +804,10 @@
                 >
                   <div class="faq-accordion-link w-dropdown-toggle">
                     <div class="faq-accordion-title-wrap">
-                      <div
-                        class="faq-accordion-title f"
-                      >
+                      <div class="faq-accordion-title f">
                         What is your typical project process?
                       </div>
-                      <div
-                        class="faq-icon-flex i"
-                      >
+                      <div class="faq-icon-flex i">
                         <img
                           loading="lazy"
                           src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677546aaebf0ae769c3c06f6_Faq-Icon.svg"
@@ -974,9 +817,7 @@
                       </div>
                     </div>
                   </div>
-                  <nav
-                    class="faq-accordion-ans-wrap w-dropdown-list g"
-                  >
+                  <nav class="faq-accordion-ans-wrap w-dropdown-list g">
                     <div class="faq-accordion-content-wrap">
                       <p class="faq-accordion-ans">
                         Our Typical Project Process at Pixelate Nest:
@@ -1015,14 +856,10 @@
             >
               <div class="faq-accordion-link w-dropdown-toggle">
                 <div class="faq-accordion-title-wrap">
-                  <div
-                    class="faq-accordion-title f"
-                  >
+                  <div class="faq-accordion-title f">
                     How long does it take to complete a project?
                   </div>
-                  <div
-                    class="faq-icon-flex i"
-                  >
+                  <div class="faq-icon-flex i">
                     <img
                       loading="lazy"
                       src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677546aaebf0ae769c3c06f6_Faq-Icon.svg"
@@ -1032,9 +869,7 @@
                   </div>
                 </div>
               </div>
-              <nav
-                class="faq-accordion-ans-wrap w-dropdown-list g"
-              >
+              <nav class="faq-accordion-ans-wrap w-dropdown-list g">
                 <div class="faq-accordion-content-wrap">
                   <p class="faq-accordion-ans">
                     <b
@@ -1059,14 +894,10 @@
             >
               <div class="faq-accordion-link w-dropdown-toggle">
                 <div class="faq-accordion-title-wrap">
-                  <div
-                    class="faq-accordion-title f"
-                  >
+                  <div class="faq-accordion-title f">
                     Do you offer post-launch support and maintenance?
                   </div>
-                  <div
-                    class="faq-icon-flex i"
-                  >
+                  <div class="faq-icon-flex i">
                     <img
                       loading="lazy"
                       src="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/677546aaebf0ae769c3c06f6_Faq-Icon.svg"
@@ -1076,9 +907,7 @@
                   </div>
                 </div>
               </div>
-              <nav
-                class="faq-accordion-ans-wrap w-dropdown-list g"
-              >
+              <nav class="faq-accordion-ans-wrap w-dropdown-list g">
                 <div class="faq-accordion-content-wrap">
                   <p class="faq-accordion-ans">
                     <b
@@ -1306,8 +1135,7 @@
                 <div
                   class="slide-nav w-slider-nav w-slider-nav-invert w-round"
                 ></div>
-                <div class="w-embed">
-                </div>
+                <div class="w-embed"></div>
               </div>
             </div>
           </div>
@@ -1327,7 +1155,7 @@
                   class="single-footer-link w--current"
                   >Home</a
                 ><a href="./about.html" class="single-footer-link">About</a
-                ><a href="./blog.html" class="single-footer-link">Work</a>
+                ><a href="./works.html" class="single-footer-link">Projects</a>
               </div>
               <div
                 data-w-id="35840d97-77fd-45fe-5979-6908ca4c6b8d"
@@ -1452,6 +1280,19 @@
           '{{wf {"path":"symbol","type":"PlainText"} }} {{wf {"path":"amount","type":"CommercePrice"} }} {{wf {"path":"currencyCode","type":"PlainText"} }}',
         hideDecimalForWholeNumbers: false,
       };
+    </script>
+    <script>
+      const interval = setInterval(() => {
+        const viewer = document.querySelector("spline-viewer");
+        if (viewer && viewer.shadowRoot) {
+          const logo = viewer.shadowRoot.querySelector("#logo");
+          if (logo) {
+            logo.remove();
+            console.log("Logo removed!");
+            clearInterval(interval);
+          }
+        }
+      }, 500);
     </script>
   </body>
 </html>

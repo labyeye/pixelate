@@ -1197,6 +1197,85 @@ a {
 .section-title-content-wrap.testimonial {
   max-width: 280px;
 }
+/* Floating circles styles */
+.floating-circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  opacity: 0.2;
+  filter: blur(1px);
+  animation: float 15s infinite ease-in-out;
+}
+
+/* Different circle sizes and positions */
+.floating-circle:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.floating-circle:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.floating-circle:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  top: 70%;
+  left: 8%;
+  animation-delay: 4s;
+}
+
+.floating-circle:nth-child(4) {
+  width: 120px;
+  height: 120px;
+  top: 30%;
+  right: 5%;
+  animation-delay: 1s;
+}
+
+.floating-circle:nth-child(5) {
+  width: 90px;
+  height: 90px;
+  top: 60%;
+  right: 8%;
+  animation-delay: 3s;
+}
+
+.floating-circle:nth-child(6) {
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  right: 10%;
+  animation-delay: 5s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-50px) translateX(10px);
+  }
+}
 
 .about-title {
   font-family: var(--body-font);
@@ -1205,6 +1284,7 @@ a {
   font-size: 32px;
   font-weight: 500;
   line-height: 47px;
+  text-align: justify;
 }
 
 .section-sub-title {
@@ -1789,7 +1869,22 @@ a {
   grid-auto-columns: 1fr;
   display: grid;
 }
+.spline-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Fixed height instead of min-height */
+  margin: 40px auto; /* Added top and bottom margin */
+  z-index: 1;
+  transform: scale(1); /* Removed the scale-up */
+  overflow: visible; /* Ensure nothing gets cut off */
+}
 
+spline-viewer {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
 .single-pricing-plan-wrap {
   border: 1px solid var(--gray-20);
   border-radius: 12px;

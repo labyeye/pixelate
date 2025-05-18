@@ -57,18 +57,6 @@
       type="image/x-icon"
     />
     <link href="./assets/images/logo(100x100).svg" rel="apple-touch-icon" />
-    <script type="text/javascript">
-      window.__WEBFLOW_CURRENCY_SETTINGS = {
-        currencyCode: "USD",
-        symbol: "$",
-        decimal: ".",
-        fractionDigits: 2,
-        group: ",",
-        template:
-          '{{wf {"path":"symbol","type":"PlainText"} }} {{wf {"path":"amount","type":"CommercePrice"} }} {{wf {"path":"currencyCode","type":"PlainText"} }}',
-        hideDecimalForWholeNumbers: false,
-      };
-    </script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -97,7 +85,7 @@
                 ><a href="./about.html" class="single-nav-link w-inline-block"
                   ><div>About</div></a
                 ><a href="./works.html" class="single-nav-link w-inline-block"
-                  ><div>Works</div></a
+                  ><div>Projects</div></a
                 ><a
                   href="./services.html"
                   class="single-nav-link w-inline-block"
@@ -208,7 +196,7 @@
                           HTML / CSS / Javascript
                         </div>
                         <div class="plan-feature-list-details">
-                          CMR Integration ❌
+                          CRM Integration ❌
                         </div>
                         <div class="plan-feature-list-details">
                           SEO Basics ✅
@@ -241,7 +229,7 @@
                           HTML / CSS / Javascript || React
                         </div>
                         <div class="plan-feature-list-details">
-                          CMR Integration ✅
+                          CRM Integration ✅
                         </div>
                         <div class="plan-feature-list-details">
                           SEO Basics ✅
@@ -274,7 +262,7 @@
                           Web & Mobile App (React/Flutter)
                         </div>
                         <div class="plan-feature-list-details">
-                          CMR Integration ✅
+                          CRM Integration ✅
                         </div>
                         <div class="plan-feature-list-details">
                           SEO Basics ✅ + Advanced
@@ -629,7 +617,7 @@
               >
                 <a href="./index.html" class="single-footer-link">Home</a
                 ><a href="./about.html" class="single-footer-link">About</a
-                ><a href="./blog.html" class="single-footer-link">Work</a>
+                                ><a href="./works.html" class="single-footer-link">Projects</a>
               </div>
               <div
                 data-w-id="35840d97-77fd-45fe-5979-6908ca4c6b8d"
@@ -713,7 +701,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/pricing.js" type="text/javascript"></script>
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-T64KPYDX6P"
@@ -749,6 +736,18 @@
         },
         "description": "Affordable pricing for web development, video editing, digital marketing, and videography services offered by PixelateNest."
       }
+    </script>
+    <script type="text/javascript">
+      window.__WEBFLOW_CURRENCY_SETTINGS = {
+        currencyCode: "USD",
+        symbol: "$",
+        decimal: ".",
+        fractionDigits: 2,
+        group: ",",
+        template:
+          '{{wf {"path":"symbol","type":"PlainText"} }} {{wf {"path":"amount","type":"CommercePrice"} }} {{wf {"path":"currencyCode","type":"PlainText"} }}',
+        hideDecimalForWholeNumbers: false,
+      };
     </script>
   </body>
 </html>

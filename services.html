@@ -20,145 +20,144 @@
     <meta content="Services - Pixelate Nest" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <style>
-      /* Services Section Styles */
-.services-section {
-  padding: 80px 0;
-  background-color: #f9f9f9;
-}
+      .services-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #333;
-}
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #333;
+      }
 
-.section-subtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto 50px;
-}
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto 50px;
+      }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
 
-.service-card {
-  background: white;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
+      .service-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
 
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
 
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
 
-.service-card:hover::before {
-  opacity: 1;
-}
+      .service-card:hover::before {
+        opacity: 1;
+      }
 
-.service-card:hover h3,
-.service-card:hover p,
-.service-card:hover .card-link {
-  color: white;
-}
+      .service-card:hover h3,
+      .service-card:hover p,
+      .service-card:hover .card-link {
+        color: white;
+      }
 
-.card-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f0f4ff;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
+      .card-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f4ff;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
 
-.service-card:hover .card-icon {
-  background: rgba(255,255,255,0.2);
-  transform: scale(1.1);
-}
+      .service-card:hover .card-icon {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+      }
 
-.card-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
+      .card-icon img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
 
-.service-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #333;
-  transition: color 0.3s ease;
-}
+      .service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: #333;
+        transition: color 0.3s ease;
+      }
 
-.service-card p {
-  color: #666;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
+      .service-card p {
+        color: #666;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        transition: color 0.3s ease;
+      }
 
-.card-link {
-  display: inline-block;
-  color: #6e8efb;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+      .card-link {
+        display: inline-block;
+        color: #6e8efb;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
 
-.service-card:hover .card-link {
-  color: white;
-  transform: translateX(5px);
-}
+      .service-card:hover .card-link {
+        color: white;
+        transform: translateX(5px);
+      }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
 
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-}
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
     </style>
     <link
       href="https://cdn.prod.website-files.com/67738c8879d4083ab3092160/css/spacir.webflow.5c0279056.css"
@@ -238,7 +237,7 @@
                 ><a href="./about.html" class="single-nav-link w-inline-block"
                   ><div>About</div></a
                 ><a href="./works.html" class="single-nav-link w-inline-block"
-                  ><div>Works</div></a
+                  ><div>Projects</div></a
                 ><a
                   href="./services.html"
                   aria-current="page"
@@ -304,7 +303,14 @@
               Marketing & Branding
             </h1>
           </div>
-          <p style="text-align: center; font-size: 1.2rem; color: #666;margin-top: 30px;">
+          <p
+            style="
+              text-align: center;
+              font-size: 1.2rem;
+              color: #666;
+              margin-top: 30px;
+            "
+          >
             At PixelateNest, we offer a full suite of creative services tailored
             to help your business grow. From custom web development and engaging
             video editing to powerful digital marketing and branding, we craft
@@ -314,47 +320,76 @@
       </section>
       <section class="services-section">
         <div class="container">
-  
-          
           <div class="services-grid">
             <!-- Service Card 1 -->
             <div class="service-card">
               <div class="card-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="Video Editing">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png"
+                  alt="Video Editing"
+                />
               </div>
               <h3>Video Editing</h3>
-              <p>Professional video editing services for social media, marketing, and more.</p>
-              <a href="./services/video-editing.html" class="card-link">Learn More →</a>
+              <p>
+                Professional video editing services for social media, marketing,
+                and more.
+              </p>
+              <a href="./services/video-editing.html" class="card-link"
+                >Learn More →</a
+              >
             </div>
-            
+
             <!-- Service Card 2 -->
             <div class="service-card">
               <div class="card-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Development">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                  alt="Web Development"
+                />
               </div>
               <h3>Web Development</h3>
-              <p>Custom websites and web applications tailored to your business needs.</p>
-              <a href="./services/web-app-development.html" class="card-link">Learn More →</a>
+              <p>
+                Custom websites and web applications tailored to your business
+                needs.
+              </p>
+              <a href="./services/web-app-development.html" class="card-link"
+                >Learn More →</a
+              >
             </div>
-            
+
             <!-- Service Card 3 -->
             <div class="service-card">
               <div class="card-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/1968/1968641.png" alt="Digital Marketing">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1968/1968641.png"
+                  alt="Digital Marketing"
+                />
               </div>
               <h3>Digital Marketing</h3>
-              <p>Data-driven marketing strategies to grow your online presence.</p>
-              <a href="./services/digital-marketing.html" class="card-link">Learn More →</a>
+              <p>
+                Data-driven marketing strategies to grow your online presence.
+              </p>
+              <a href="./services/digital-marketing.html" class="card-link"
+                >Learn More →</a
+              >
             </div>
-            
+
             <!-- Service Card 4 -->
             <div class="service-card">
               <div class="card-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/1373/1373061.png" alt="Videography">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1373/1373061.png"
+                  alt="Videography"
+                />
               </div>
               <h3>VideoGraphy</h3>
-              <p>Complete videography solutions to establish your unique identity.</p>
-              <a href="./services/videography.html" class="card-link">Learn More →</a>
+              <p>
+                Complete videography solutions to establish your unique
+                identity.
+              </p>
+              <a href="./services/videography.html" class="card-link"
+                >Learn More →</a
+              >
             </div>
           </div>
         </div>
@@ -370,7 +405,7 @@
               >
                 <a href="./index.html" class="single-footer-link">Home</a
                 ><a href="./about.html" class="single-footer-link">About</a
-                ><a href="./blog.html" class="single-footer-link">Work</a>
+                                ><a href="./works.html" class="single-footer-link">Projects</a>
               </div>
               <div
                 data-w-id="35840d97-77fd-45fe-5979-6908ca4c6b8d"
