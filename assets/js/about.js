@@ -3648,7 +3648,7 @@ spurious results.`);
                     console.warn(
                       "Warning: fragment with name " +
                         i +
-                        " already exists.\ngraphql-tag enforces all fragment names across your application to be unique; read more about\nthis in the docs: http://dev.apollodata.com/core/fragments.html#unique-names"
+                        " already exists.\ngraphql-tag enforces all fragment names across your application to be unique; read more about\nthis in the docs: dev.apollodata.com/core/fragments.html#unique-names"
                     )
                   : !a && J.set(i, (a = new Set())),
                   a.add(r),
@@ -7094,7 +7094,7 @@ spurious results.`);
             module.exports = t();
           })(0, function () {
             "use strict";
-            var svgNS = "http://www.w3.org/2000/svg",
+            var svgNS = "www.w3.org/2000/svg",
               locationHref = "",
               _useWebWorker = !1,
               initialDefaultFrame = -999999,
@@ -8147,7 +8147,7 @@ spurious results.`);
                           !1
                         ),
                         r.setAttributeNS(
-                          "http://www.w3.org/1999/xlink",
+                          "www.w3.org/1999/xlink",
                           "href",
                           n
                         ),
@@ -14957,7 +14957,7 @@ spurious results.`);
                           3 === e ? "luminance" : "alpha"
                         ),
                         (i = createNS("use")).setAttributeNS(
-                          "http://www.w3.org/1999/xlink",
+                          "www.w3.org/1999/xlink",
                           "href",
                           "#" + this.layerId
                         ),
@@ -15006,7 +15006,7 @@ spurious results.`);
                         ),
                         c.appendChild(d),
                         (i = createNS("use")).setAttributeNS(
-                          "http://www.w3.org/1999/xlink",
+                          "www.w3.org/1999/xlink",
                           "href",
                           "#" + this.layerId
                         ),
@@ -15134,7 +15134,7 @@ spurious results.`);
                       this.globalData.renderConfig.imagePreserveAspectRatio
                   ),
                   this.innerElem.setAttributeNS(
-                    "http://www.w3.org/1999/xlink",
+                    "www.w3.org/1999/xlink",
                     "href",
                     e
                   ),
@@ -17574,7 +17574,7 @@ spurious results.`);
                         ),
                         (o.textContent = s[r].val),
                         o.setAttributeNS(
-                          "http://www.w3.org/XML/1998/namespace",
+                          "www.w3.org/XML/1998/namespace",
                           "xml:space",
                           "preserve"
                         );
@@ -17720,11 +17720,11 @@ spurious results.`);
               (SVGRendererBase.prototype.configAnimation = function (e) {
                 this.svgElement.setAttribute(
                   "xmlns",
-                  "http://www.w3.org/2000/svg"
+                  "www.w3.org/2000/svg"
                 ),
                   this.svgElement.setAttribute(
                     "xmlns:xlink",
-                    "http://www.w3.org/1999/xlink"
+                    "www.w3.org/1999/xlink"
                   ),
                   this.renderConfig.viewBoxSize
                     ? this.svgElement.setAttribute(
@@ -20460,7 +20460,7 @@ spurious results.`);
                   } else if (
                     ((c.textContent = d[i].val),
                     c.setAttributeNS(
-                      "http://www.w3.org/XML/1998/namespace",
+                      "www.w3.org/XML/1998/namespace",
                       "xml:space",
                       "preserve"
                     ),
@@ -20761,7 +20761,7 @@ spurious results.`);
                       this.assetData.h + "px"
                     ),
                     this.imageElem.setAttributeNS(
-                      "http://www.w3.org/1999/xlink",
+                      "www.w3.org/1999/xlink",
                       "href",
                       e
                     ),
@@ -24775,7 +24775,7 @@ spurious results.`);
                     : B(
                         "Moment Timezone has no data for " +
                           t +
-                          ". See http://momentjs.com/timezone/docs/#/data-loading/."
+                          ". See momentjs.com/timezone/docs/#/data-loading/."
                       ),
                   this
                 );
@@ -38951,7 +38951,7 @@ spurious results.`);
               if (((t.abbr = e), null != t1[e]))
                 I(
                   "defineLocaleOverride",
-                  "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."
+                  "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See momentjs.com/guides/#/warnings/define-locale/ for more info."
                 ),
                   (i = t1[e]._config);
               else if (null != t.parentLocale) {
@@ -39437,7 +39437,7 @@ spurious results.`);
               return nC(e, t, n, i, !1);
             }
             (t.createFromInputFallback = O(
-              "value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.",
+              "value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to momentjs.com/guides/#/warnings/js-date/ for more info.",
               function (e) {
                 e._d = new Date(e._i + (e._useUTC ? " UTC" : ""));
               }
@@ -39445,7 +39445,7 @@ spurious results.`);
               (t.ISO_8601 = function () {}),
               (t.RFC_2822 = function () {});
             var nR = O(
-                "moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/",
+                "moment().min is deprecated, use moment.max instead. momentjs.com/guides/#/warnings/min-max/",
                 function () {
                   var e = nw.apply(null, arguments);
                   return this.isValid() && e.isValid()
@@ -39456,7 +39456,7 @@ spurious results.`);
                 }
               ),
               nk = O(
-                "moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/",
+                "moment().max is deprecated, use moment.min instead. momentjs.com/guides/#/warnings/min-max/",
                 function () {
                   var e = nw.apply(null, arguments);
                   return this.isValid() && e.isValid()
@@ -39777,7 +39777,7 @@ spurious results.`);
                         t +
                         "(period, number) is deprecated. Please use moment()." +
                         t +
-                        "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."
+                        "(number, period). See momentjs.com/guides/#/warnings/add-inverted-param/ for more info."
                     ),
                     (r = n),
                     (n = i),
@@ -40750,11 +40750,11 @@ spurious results.`);
                 tu
               )),
               (rL.zone = O(
-                "moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/",
+                "moment().zone is deprecated, use moment().utcOffset instead. momentjs.com/guides/#/warnings/zone/",
                 nZ
               )),
               (rL.isDSTShifted = O(
-                "isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information",
+                "isDSTShifted is deprecated. See momentjs.com/guides/#/warnings/dst-shifted/ for more information",
                 n5
               ));
             var rN = w.prototype;
